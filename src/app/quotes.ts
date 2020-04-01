@@ -3,7 +3,6 @@ export class Quotes {
     public numberoflikes: number;
     public highestCounter: number;
   constructor( 
-    
     public id: number,
     public quote: string, 
     public author: string, 
@@ -11,7 +10,6 @@ export class Quotes {
     public description: string,
     public mediumDate: Date,) 
     {
-
     this.showDescription = false;
     this.numberoflikes = 0;
     this.highestCounter = 0;
