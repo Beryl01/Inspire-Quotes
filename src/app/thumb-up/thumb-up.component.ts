@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-thumb-up',
   templateUrl: './thumb-up.component.html',
