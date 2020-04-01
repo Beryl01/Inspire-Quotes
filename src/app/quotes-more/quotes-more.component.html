@@ -42,23 +42,23 @@
         <thead>
             <tr>
                 <th scope="col" class="text-white-50">
-                    <img src="/assets/dislike.png" class="img-header float-left" alt="sharing is caring">
+                    <img src="/assets/dislike.png" class="img-header float-left" alt="dislike">
                    
-                    <img src="/assets/like.png" class="img-header float-right" alt="sharing is caring">
+                    <img src="/assets/like.png" class="img-header float-right" alt="like">
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <div *ngFor= 'let quote of quotes;let i = index'>
-                  <img src="/assets/platos.jpeg" class="img-header float-right" alt="sharing is caring">
+                  <img src="/assets/platos.jpeg" class="img-header float-right" alt="platos">
                     <td id="{{i}}"> {{ quote.quote}} {{ quote.mediumDate|date }}
                       
                     </td>
                     <td class="blockquote-footer float-right">
                         Author <br> <cite title="Author"> {{ quote.author }} </cite>
                     </td>
-                    <img src="/assets/mit2.jpeg" class="img-header float-right" alt="sharing is caring">
+                    <img src="/assets/mit2.jpeg" class="img-header float-right" alt="mitchelle">
                     <td class="blockquote-footer float-left">
                         Submitter <br> <cite title="Submitter"> {{ quote.submitter }} </cite>
                     </td>
