@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
 @Pipe({
   name: 'dateCount'
 })
@@ -14,7 +13,7 @@ export class QuotesPipe implements PipeTransform {
     var dateCounter = dateDifferenceSeconds/secondsInDay;
 
 
-    
+
     if (dateCounter >= 1 && value > todayWithNoTime){
       return dateCounter;
     }else{
