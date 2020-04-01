@@ -7,6 +7,7 @@ body {
     ,url(../src/assets/inspire.jpeg)center/cover fixed no-repeat;
     overflow-x: hidden;
 }
+
 h1,
 h2,
 h3,
@@ -15,6 +16,7 @@ h5,
 h6{
     text-align: center;
 }
+
 #mainNav {
     background-color: black;
     height: 80px;
