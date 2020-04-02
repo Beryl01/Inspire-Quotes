@@ -13,6 +13,7 @@ import { DetailsComponent } from './details/details.component';
 import { FormToAddComponent } from './form-to-add/form-to-add.component';
 import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
+import { MostlikedDirective } from './mostliked.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DateCountPipe } from './date-count.pipe';
     DetailsComponent,
     FormToAddComponent,
     StrikethroughDirective,
-    DateCountPipe
+    DateCountPipe,
+    MostlikedDirective
   ],
   imports: [
     BrowserModule,

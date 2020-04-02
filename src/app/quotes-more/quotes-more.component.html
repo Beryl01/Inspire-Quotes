@@ -34,38 +34,39 @@
 <br>
 
 <div class="container mr-10" id="recent">
-  <h1 class="text-center text-white"><strong><img src="/assets/quote.jpeg" 
-    class="img-right" alt="quote">Recently Added Quotes
-    <img src="/assets/quote.jpeg" class="img-right" alt="quote"></strong></h1>
+ 
 
     <table class="table table-sm table-light">
         <thead>
             <tr>
                 <th scope="col" class="text-white-50">
-                    <img src="/assets/dislike.png" class="img-header float-left" alt="dislike">
-                   
-                    <img src="/assets/like.png" class="img-header float-right" alt="like">
+                    <!-- <img src="./assets/dislike.png" class="img-header float-left" alt="dislike"> -->
+                    <h1 class="text-center text-dark"><strong><img src="./assets/dislike.png" 
+                      class="img-right" alt="quote">Recently Added Quotes
+                      <img src="./assets/like.png" class="img-right" alt="quote"></strong></h1>
+                    <!-- <img src="./assets/like.png" class="img-header float-right" alt="like"> -->
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <div *ngFor= 'let quote of quotes;let i = index'>
-                  <img src="/assets/platos.jpeg" class="img-header float-right" alt="platos">
+                 
                     <td id="{{i}}"> {{ quote.quote}} {{ quote.mediumDate|date }}
                       
                     </td>
+                    <img src="./assets/mit2.jpeg" class="img-header float-right" alt="platos">
                     <td class="blockquote-footer float-right">
                         Author <br> <cite title="Author"> {{ quote.author }} </cite>
                     </td>
-                    <img src="/assets/mit2.jpeg" class="img-header float-right" alt="mitchelle">
+                    <img src="./assets/mit2.jpeg" class="img-header float-left" alt="mitchelle">
                     <td class="blockquote-footer float-left">
                         Submitter <br> <cite title="Submitter"> {{ quote.submitter }} </cite>
                     </td>
                      
                     <app-thumb-up></app-thumb-up>
                     <app-thumb-down></app-thumb-down>
-                    <button (click)='toggleDetails(i)' class="btn btn-outline-dark m-2">Show Quote Details</button>
+                    <button (click)='toggleDetails(i)' class="btn btn-outline-dark m-2">Show Quote Details Or Delete</button>
 
                     <div *ngIf='quote.showDescription'>
                         <app-details  *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-details>
@@ -74,14 +75,14 @@
             </tr>  
             <br>
             <tr>
-            <p *ngIf='quotes.length > 0'><button (click)='showMeMostLiked()' class="btn btn-outline-dark m-2 check">Check the Best quote</button>
-          </p>
-          <div *ngIf='bestQuote && quotes.length > 0' appStrikethrough>
-            <div>
-              <p>{{bestQuote}}</p>
-              <p>{{numberoflikes}}</p>
-            </div>
-          </div>
+              <p *ngIf='quotes.length > 0'><button (click)='showMeMostLiked()' class="btn btn-outline-dark m-2 check">Check Most Liked quote</button>
+              </p>
+              <div *ngIf='bestQuote && quotes.length > 0' appMostLiked>
+                <div>
+                  <p>Best Quote:{{bestQuote}}</p>
+                  <p>Votes:{{numberoflikes}}</p>
+                </div>
+              </div>
           </tr>
         </tbody>
     </table>     
@@ -91,7 +92,7 @@
   <div class="container align-items-center">
     <span class="text-center text-white"><h5>Copyrights © Quotes. All rights reserved</h5></span>
   </div>
-  <div class="social">
+  <div class="container-fluid social">
   <a href="www.twitter.com"><img src="./assets/social_icons/twitter.png"></a>
   <a href="www.dribble.com"><img src="./assets/social_icons/dribble.png"></a>
   <a href="www.facebook.com"><img src="./assets/social_icons/facebook.png"></a>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Quotes } from 'src/app/quotes';
 
 @Component({
@@ -25,13 +24,6 @@ export class QuotesMoreComponent implements OnInit {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
 
-  completeGoal(isComplete, index){
-    if(isComplete){
-      // alert("You cannot delete a quote that you haven't posted")
-      this.quotes.splice(index,1);
-   }
-  }
-
   numberoflikes=0
   highestCounter=0;
   bestQuote:string;
@@ -54,6 +46,14 @@ export class QuotesMoreComponent implements OnInit {
       }
     }
   }
+
+  completeGoal(isComplete, index){
+    if(isComplete){
+      // alert("You cannot delete a quote that you haven't posted")
+      this.quotes.splice(index,1);
+   }
+  }
+  
   constructor() { }
 
   ngOnInit(): void {
