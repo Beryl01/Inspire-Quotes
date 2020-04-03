@@ -31,12 +31,14 @@ export class QuotesMoreComponent implements OnInit {
   showMeMostLiked(){
     this.highestCounter=0;
     for(let i=0 ;i < this.quotes.length;i++){
-      if(this.quotes[i].numberoflikes >this.highestCounter){
-        this.highestCounter=this.quotes[i].numberoflikes;
-        this.bestQuote=this.quotes[i].author;
+      this.highestCounter = this.quotes[this.highestCounter].numberoflikes;
+      if(this.quotes[i].highestCounter >this.quotes[i].numberoflikes){
+        this.highestCounter=this.quotes[i].numberoflikes;  
       }
+      return  this.bestQuote=this.quotes[i].author;
     }
-  }
+  } 
+
 
    deleteQuote(isComplete, index){
     if (isComplete) {

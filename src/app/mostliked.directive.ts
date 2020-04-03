@@ -7,7 +7,7 @@ export class MostlikedDirective {
 
   constructor(private elem:ElementRef){
 
-    this.elem.nativeElement.style.color="blue"
+    elem.nativeElement.style.backgroundColor="#834c69"
 
   }
 
