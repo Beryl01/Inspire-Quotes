@@ -10,6 +10,7 @@ This app is used to generate the upvote(likes) and downvote(dislikes) of the quo
 
 This project was generated with [Angular CLI]
 (https://github.com/angular/angular-cli) version 9.0.7.
+https://beryl01.github.io/Inspire-Quotes/
 
 ## Development server
 
