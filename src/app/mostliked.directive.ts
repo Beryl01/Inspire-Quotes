@@ -10,5 +10,4 @@ export class MostlikedDirective {
     elem.nativeElement.style.backgroundColor="#834c69"
 
   }
-
 }

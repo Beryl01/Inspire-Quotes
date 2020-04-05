@@ -15,5 +15,4 @@ export class ThumbDownComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

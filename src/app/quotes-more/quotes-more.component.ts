@@ -18,7 +18,7 @@ export class QuotesMoreComponent implements OnInit {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
     quote.mediumDate = new Date(quote.mediumDate);
-    this.quotes.unshift(quote)
+    this.quotes.push(quote)
   }
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
@@ -37,12 +37,12 @@ export class QuotesMoreComponent implements OnInit {
       }
       return  this.bestQuote=this.quotes[i].author;
     }
-  } 
-
+  }
+  
 
    deleteQuote(isComplete, index){
     if (isComplete) {
-      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
+      let toDelete = confirm(`Are you sure you want to delete quote by ${this.quotes[index].author}?`)
       if (toDelete){
         this.quotes.splice(index,1)
       }
@@ -60,5 +60,4 @@ export class QuotesMoreComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

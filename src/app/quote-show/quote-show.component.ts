@@ -11,5 +11,4 @@ export class QuoteShowComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

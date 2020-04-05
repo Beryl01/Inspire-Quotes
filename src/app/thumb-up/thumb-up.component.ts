@@ -16,5 +16,4 @@ export class ThumbUpComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

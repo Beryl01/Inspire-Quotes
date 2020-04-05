@@ -66,9 +66,9 @@
 
           <app-thumb-up></app-thumb-up>
           <app-thumb-down></app-thumb-down>
-         
+
           <button (click)='toggleDetails(i)' class="btn btn-outline-dark m-2">Show Quote Details Or Delete</button>
-        
+
           <div *ngIf='quote.showDescription'>
             <app-details *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
             </app-details>
@@ -77,14 +77,15 @@
       </tr>
       <br>
       <tr>
-        <!-- <p *ngIf='quotes.length > 0'><button (click)='showMeMostLiked()' class="btn btn-outline-dark m-2 check">Check Most Liked quote</button>
-              </p>
-              <div *ngIf='bestQuote && quotes.length > 0' appMostLiked>
-                <div>
-                  <p>Best Quote:{{bestQuote}}</p>
-                  <p>Votes:{{numberoflikes}}</p>
-                </div>
-              </div> -->
+        <p *ngIf='quotes.length > 0'><button (click)='showMeMostLiked()' class="btn btn-outline-dark m-2 check">Check
+            For The Most Liked quote</button>
+        </p>
+        <div *ngIf='bestQuote && quotes.length > 0' appMostLiked>
+          <div>
+            <h3>Best Quote: {{bestQuote}}</h3>
+            <h3>Votes: {{highestCounter}}</h3>
+          </div>
+        </div>
       </tr>
     </tbody>
   </table>
